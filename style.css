@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    cursor: default;
+}
+
+*::selection {
+    background-color: #ffecb3;
+    color: #666;
+}
+
+body {
+    overflow: hidden;
+}
+
+#app {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: black;
+}
+
+#hr-cont {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background-color: #5c5c5c;
+}
+
+#hr-cont spam {
+    white-space: nowrap;
+    user-select: none;
+    font-size: 300px;
+    font-family: monospace;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/*                                                     */
+/*       @@@@ @                           @@@@@        */
+/*      @@   @@@                             @@        */
+/*     @@     @     @@@@@@@   @@@@ @@@@      @@        */
+/*      @@@@@@     @@     @@    @@@@  @      @@        */
+/*           @@@  @@            @@           @@        */
+/*     @@     @@   @            @@           @@        */
+/*     @@@@@@@@     @@@@@@@@  @@@@@@@@    @@@@@@@@     */
+/*                                                     */
+div::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+    height: 10px;
+}
+div::-webkit-scrollbar-thumb {
+    background-color: #99999933;
+}
+div:hover::-webkit-scrollbar-thumb {
+    background-color: gainsboro;
+}
+#app::-webkit-scrollbar-thumb {
+    background-color: #666;
+}
+
+/*                                                                            */
+/*     @@@@@                                   @@@                            */
+/*     @@@@@                                     @                            */
+/*       @@         @@@@@@     @@@@@@      @@@@@ @    @@@@@@     @@@@ @@@@    */
+/*       @@        @@    @@         @@   @@@    @@   @@    @@@     @@@   @    */
+/*       @@    @@ @@      @@   @@@@@@@   @@      @  @@@@@@@@@@     @@         */
+/*       @@    @@ @@      @@  @@    @@   @@     @@   @@            @@         */
+/*     @@@@@@@@@@  @@@@@@@@   @@@@@@@@@@  @@@@@@@@@@  @@@@@@@@  @@@@@@@@      */
+/*                                                                            */
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loader:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.loader svg {
+    animation: rotate 2s linear infinite;
+    height: 100%;
+    transform-origin: center center;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.loader svg circle {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    stroke-linecap: round;
+    stroke-width: 2;
+    fill: none;
+    stroke-miterlimit: 10;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+    }
+    50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35;
+    }
+    100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124;
+    }
+}
