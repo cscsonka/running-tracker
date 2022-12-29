@@ -1,7 +1,7 @@
 (function () {
 	function Step() {
 		this.init();
-		return this.step;
+		return this.Step;
 	}
 
 	Step.prototype = {
