@@ -8,7 +8,7 @@ $("#hr-cont").on("click", () => {
                 var heartRateMeasurement = heartRateSensor.parseHeartRate(event.target.value);
                 var hr = heartRateMeasurement.heartRate;
                 $("#hr-cont spam")
-                    .css({ "font-size": "300px" })
+                    //.css({ "font-size": "300px" })
                     .html(hr);
                 if (hr < hr_limit) {
                     $("#hr-cont").css({ "background-color": "#5ccd5c" });
