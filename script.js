@@ -1,3 +1,11 @@
+var speech = new SpeechSynthesisUtterance();
+var voices = speechSynthesis.getVoices();
+function voice_feedback(text, index) {
+    speech.voice = voices[index];
+    speech.text = text;
+    speechSynthesis.speak(speech);
+}
+
 $("#hr-cont").on("click", () => {
     heartRateSensor.connect()
         .then(() => heartRateSensor.startNotificationsHeartRateMeasurement().then(heartRateMeasurement => {
@@ -27,14 +35,5 @@ $("#hr-cont").on("click", () => {
                 .html(error.toString());
         });
 });
-
-
-var speech = new SpeechSynthesisUtterance();
-var voices = speechSynthesis.getVoices();
-function voice_feedback(text, index) {
-    speech.voice = voices[index];
-    speech.text = text;
-    speechSynthesis.speak(speech);
-}
 
 
