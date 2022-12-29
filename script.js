@@ -43,7 +43,8 @@ var step = new Step();
 var ps;
 window.addEventListener("devicemotion", function () {
     if (ps !== step.count) {
-        $("#cadence-cont spam").html(step.count + " - " + step.timestamp + " | " + text);
+        var text = $("#cadence-cont spam").html();
+        $("#cadence-cont spam").html(step.count + " - " + step.timestamp + "<br>" + text);
         ps = step.count;
     }
 }, false);

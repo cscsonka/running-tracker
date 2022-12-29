@@ -34,11 +34,11 @@ body {
 #hr-cont spam {
     color: black;
     user-select: none;
-    font-size: 150px;
+    font-size: 30px;
     position: absolute;
-    top: 50%;
+    top: 0%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
 }
 
 #cadence-cont {
