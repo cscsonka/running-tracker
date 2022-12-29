@@ -42,7 +42,7 @@ function voice_feedback(text, index) {
 var count = new Countstep();
 window.addEventListener("devicemotion", function () {
     var text = $("#cadence-cont spam").html();
-    $("#cadence-cont spam").html(count + " | " + text);
+    $("#cadence-cont spam").html(count + " - " + timestamp + " | " + text);
 }, false);
 
 

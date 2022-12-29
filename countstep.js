@@ -25,7 +25,6 @@
 						_this.count++;
 						_this.timestamp = new Date().getTime();
 						_this.flag = false;
-
 					};
 
 				}
