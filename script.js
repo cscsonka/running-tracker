@@ -11,7 +11,7 @@ $("#hr-cont").on("click", () => {
                 if (hr < hr_limit) {
                     $("#hr-cont").css({ "background-color": "#5ccd5c" });
                 } else {
-                    $("#hr-cont").css({ "background-color": "inianred" });
+                    $("#hr-cont").css({ "background-color": "indianred" });
                 }
             });
         }))
