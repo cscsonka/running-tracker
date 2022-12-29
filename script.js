@@ -1,8 +1,9 @@
 $("#hr-cont").on("click", () => {
     heartRateSensor.connect()
         .then(() => heartRateSensor.startNotificationsHeartRateMeasurement().then(heartRateMeasurement => {
-            var hr_limit = 100;
+            var hr_limit = 85;
             var hr_limit_reached = false;
+            document.getElementById("app").requestFullscreen();
             heartRateMeasurement.addEventListener("characteristicvaluechanged", event => {
                 var heartRateMeasurement = heartRateSensor.parseHeartRate(event.target.value);
                 var hr = heartRateMeasurement.heartRate;
@@ -19,7 +20,6 @@ $("#hr-cont").on("click", () => {
                     hr_limit_reached = true;
                 }
             });
-            document.getElementById("app").requestFullscreen();
         }))
         .catch(error => {
             $("#hr-cont spam")
