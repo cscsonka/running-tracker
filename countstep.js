@@ -8,8 +8,7 @@
 		init: function () {
 			var _this = this;
 			_this.flag = false;
-			_this.count = [];
-			_this.count[0] = 0;
+			_this.count = 0;
 
 			function motionHandler(event) {
 				var accGravity = event.accelerationIncludingGravity;
@@ -23,7 +22,8 @@
 				}
 				if ((_this.yg - 10 * Math.sin(event.beta * Math.PI / 180)) < -1) {
 					if (_this.flag == true) {
-						_this.count[0]++;
+						_this.count++;
+						_this.timestamp = new Date().getTime();
 						_this.flag = false;
 
 					};
@@ -35,9 +35,6 @@
 				window.addEventListener("devicemotion", motionHandler, false);
 				window.addEventListener("deviceorientation", orientationHandler, false);
 				return _this.count;
-			}
-			else {
-				alert('Your browser does not support this pedometer plug-in.');
 			}
 		},
 	}
