@@ -27,7 +27,7 @@ $("#hr-cont").on("click", () => {
 
 
 $("#cadence-cont").on("click", () => {
-    document.getElementById("app").requestFullscreen();
+    document.body.requestFullscreen();
 });
 
 
