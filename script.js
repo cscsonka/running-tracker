@@ -1,7 +1,6 @@
 var speech = new SpeechSynthesisUtterance();
-var voices = speechSynthesis.getVoices();
 function voice_feedback(text, index) {
-    speech.voice = voices[index];
+    speech.voice = speechSynthesis.getVoices()[index];
     speech.text = text;
     speechSynthesis.speak(speech);
 }
