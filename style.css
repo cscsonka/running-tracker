@@ -30,6 +30,13 @@ body {
     background-color: #5c5c5c;
 }
 
+#cadence-cont {
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background-color: cornflowerblue;
+}
+
 #hr-cont spam {
     color: black;
     user-select: none;

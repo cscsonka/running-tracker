@@ -1,12 +1,11 @@
 $("#hr-cont").on("click", () => {
     heartRateSensor.connect()
         .then(() => heartRateSensor.startNotificationsHeartRateMeasurement().then(heartRateMeasurement => {
+            $("#hr-cont").off("click");
             var hr_limit = 85;
             var hr_limit_reached = false;
-            document.getElementById("app").requestFullscreen();
             heartRateMeasurement.addEventListener("characteristicvaluechanged", event => {
-                var heartRateMeasurement = heartRateSensor.parseHeartRate(event.target.value);
-                var hr = heartRateMeasurement.heartRate;
+                var hr = heartRateSensor.parseHeartRate(event.target.value).heartRate;
                 $("#hr-cont spam")
                     //.css({ "font-size": "300px" })
                     .html(hr);
@@ -26,6 +25,11 @@ $("#hr-cont").on("click", () => {
                 .css({ "font-size": "40px" })
                 .html(error.toString());
         });
+});
+
+
+$("#cadence-cont").on("click", () => {
+    document.getElementById("app").requestFullscreen();
 });
 
 
