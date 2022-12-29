@@ -39,10 +39,10 @@ function voice_feedback(text, index) {
 }
 
 
-var count = new Countstep();
+var step = new Step();
 window.addEventListener("devicemotion", function () {
     var text = $("#cadence-cont spam").html();
-    $("#cadence-cont spam").html(count + " - " + timestamp + " | " + text);
+    $("#cadence-cont spam").html(step.count + " - " + step.timestamp + " | " + text);
 }, false);
 
 
