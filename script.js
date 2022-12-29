@@ -6,7 +6,9 @@ $("#hr-cont").on("click", () => {
             heartRateMeasurement.addEventListener("characteristicvaluechanged", event => {
                 var heartRateMeasurement = heartRateSensor.parseHeartRate(event.target.value);
                 var hr = heartRateMeasurement.heartRate;
-                $("#hr-cont spam").html(hr);
+                $("#hr-cont spam")
+                    .css({ "font-size": "450px" })
+                    .html(hr);
                 if (hr < hr_limit) {
                     $("#hr-cont").css({ "background-color": "#5ccd5c" });
                     voice_feedback("Now it's fine.", 5);
@@ -18,7 +20,9 @@ $("#hr-cont").on("click", () => {
             document.getElementById("app").requestFullscreen();
         }))
         .catch(error => {
-            $("#hr-cont spam").html(error.toString());
+            $("#hr-cont spam")
+                .css({ "font-size": "40px" })
+                .html(error.toString());
         });
 });
 

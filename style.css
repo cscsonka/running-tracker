@@ -33,7 +33,7 @@ body {
 #hr-cont spam {
     white-space: nowrap;
     user-select: none;
-    font-size: 300px;
+    font-size: 200px;
     font-family: monospace;
     position: absolute;
     top: 50%;
@@ -57,12 +57,15 @@ div::-webkit-scrollbar {
     width: 5px;
     height: 10px;
 }
+
 div::-webkit-scrollbar-thumb {
     background-color: #99999933;
 }
+
 div:hover::-webkit-scrollbar-thumb {
     background-color: gainsboro;
 }
+
 #app::-webkit-scrollbar-thumb {
     background-color: #666;
 }
@@ -123,10 +126,12 @@ div:hover::-webkit-scrollbar-thumb {
         stroke-dasharray: 1, 200;
         stroke-dashoffset: 0;
     }
+
     50% {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -35;
     }
+
     100% {
         stroke-dasharray: 89, 200;
         stroke-dashoffset: -124;
