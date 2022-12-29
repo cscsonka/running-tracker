@@ -41,7 +41,7 @@ function voice_feedback(text, index) {
 
 var count = new Countstep();
 window.addEventListener("devicemotion", function () {
-    document.querySelector("#cadence-cont spam").innerHTML = count[0];
+    $("#cadence-cont spam").html(count[0]);
 }, false);
 
 
