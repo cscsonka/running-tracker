@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     color: white;
+    font-family: monospace;
     cursor: default;
 }
 
@@ -30,6 +31,16 @@ body {
     background-color: #5c5c5c;
 }
 
+#hr-cont spam {
+    color: black;
+    user-select: none;
+    font-size: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #cadence-cont {
     position: relative;
     width: 100%;
@@ -37,17 +48,15 @@ body {
     background-color: cornflowerblue;
 }
 
-#hr-cont spam {
+#cadence-cont spam {
     color: black;
     user-select: none;
     font-size: 200px;
-    font-family: monospace;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 
 
 /*                                                     */
