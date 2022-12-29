@@ -39,12 +39,12 @@ function voice_feedback(text, index) {
 }
 
 
-var step = new Step();
 var ps;
+var step = new Step();
 window.addEventListener("devicemotion", function () {
     if (ps !== step.count) {
-        let text = $("#cadence-cont spam").html();
-        $("#cadence-cont spam").html(step.count + " - " + step.timestamp + "<br>" + text);
+        var cadence_text = $("#cadence-cont spam");
+        cadence_text.html(step.count + " - " + step.timestamp + "<br>" + cadence_text.html());
         ps = step.count;
     }
 }, false);
