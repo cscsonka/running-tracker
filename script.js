@@ -16,8 +16,7 @@ $("#hr-cont").on("click", () => {
             });
         }))
         .catch(error => {
-            console.log(error);
-            $("#hr-cont spam").html(error);
+            $("#hr-cont spam").html(error.toString());
         });
 });
 
