@@ -25,7 +25,7 @@
 				}
 				if ((_this.yg - 10 * Math.sin(event.beta * Math.PI / 180)) < -1) {
 					if (_this.flag == true) {
-						_this.step.count = _this.step.count++;
+						_this.step.count++;
 						_this.step.timestamp = new Date().getTime();
 						_this.flag = false;
 					};
