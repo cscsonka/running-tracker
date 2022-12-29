@@ -1,9 +1,9 @@
 var hr_limit = 100;
 
 $("#hr-cont").on("click", () => {
+    document.getElementById("app").requestFullscreen();
     heartRateSensor.connect()
         .then(() => heartRateSensor.startNotificationsHeartRateMeasurement().then(heartRateMeasurement => {
-            document.getElementById("app").requestFullscreen();
             heartRateMeasurement.addEventListener("characteristicvaluechanged", event => {
                 var heartRateMeasurement = heartRateSensor.parseHeartRate(event.target.value);
                 var hr = heartRateMeasurement.heartRate;
