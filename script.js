@@ -42,10 +42,10 @@ function voice_feedback(text, index) {
 var ps;
 var my_step = new Step();
 window.addEventListener("devicemotion", function () {
-    if (ps !== my_step.step.count) {
+    if (ps !== my_step.count[0]) {
         var cadence_text = $("#cadence-cont spam");
-        cadence_text.html(my_step.step.count + " - " + my_step.step.timestamp + "<br>" + cadence_text.html());
-        ps = my_step.step.count;
+        cadence_text.html(my_step.count[0] + "<br>" + cadence_text.html());
+        ps = my_step.count[0];
     }
 }, false);
 
