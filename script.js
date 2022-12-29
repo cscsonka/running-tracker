@@ -44,7 +44,7 @@ var my_step = new Step();
 window.addEventListener("devicemotion", function () {
     var current_ts = my_step.step.timestamp;
     if (previous_ts !== current_ts) {
-        var cadence = Math.round((current_ts - previous_ts) / 1000 / 60);
+        var cadence = Math.round(60000 / (current_ts - previous_ts));
         $("#cadence-cont spam").html(cadence);
         previous_ts = current_ts;
     }
