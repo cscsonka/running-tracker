@@ -54,18 +54,19 @@ function startWatch(){
 function startHRMonitoring(){
     heartRateSensor.connect()
     .then(() => heartRateSensor.startNotificationsHeartRateMeasurement().then(heartRateMeasurement => {
-        $("#hrs").off("click").css({ "color": "black" });
+        $("#hrs").off("click");
+        $("span").css({ "color": "black" });
         var hr_limit = 85;
         var hr_limit_reached = false;
         heartRateMeasurement.addEventListener("characteristicvaluechanged", event => {
             var hr = heartRateSensor.parseHeartRate(event.target.value).heartRate;
             $("#hrs").html(hr);
             if (hr < hr_limit) {
-                $("#hrs").css({ "background-color": "#5ccd5c" });
+                $("#app").css({ "background-color": "#5ccd5c" });
                 if (hr_limit_reached === true) voice_feedback("Now it's fine.", 5);
                 hr_limit_reached = false;
             } else {
-                $("#hrs").css({ "background-color": "indianred" });
+                $("#app").css({ "background-color": "indianred" });
                 if (hr_limit_reached === false) voice_feedback("Slow down!", 6);
                 hr_limit_reached = true;
             }
