@@ -1,22 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8" />
-        <title>Running Tracker</title>
-        <link rel="stylesheet" href="style.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <?!= include("Style"); ?>
+        <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     </head>
     <body>
+        <div id="loader-init" class="loader"></div>
+
         <div id="app">
-            <div id="hr-cont">
-                <spam>💙</spam>
+            <div class="cont">
+                <spam id="hrs">145</spam>
             </div>
-            <div id="cadence-cont">
-                <spam>👣</spam>
+            <div class="cont">
+                <spam id="stc">164</spam>
+            </div>
+            <div class="cont">
+                <spam id="vlc">-</spam>
+            </div>
+            <div class="cont">
+                <spam id="wch">0:00:00</spam>
+            </div>
+            <div class="cont">
+                <spam id="dsc">-</spam>
             </div>
         </div>
-        <script src="heartRateSensor.js"></script>
-        <script src="countstep.js"></script>
-        <script src="script.js"></script>
+
+        <?!= include("hr_sensor"); ?>
+        <?!= include("step_counter"); ?>
+        <?!= include("Script"); ?>
     </body>
 </html>
+
+
