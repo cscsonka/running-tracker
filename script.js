@@ -14,7 +14,7 @@ navigator.geolocation.watchPosition(
     },
     error => {
         console.log(error);
-        $("#vlc").html("\(°_o)/");
+        $("#vlc").html("\\(°_o)/");
     },
     {
         enableHighAccuracy: true,
