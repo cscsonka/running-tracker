@@ -6,6 +6,7 @@ $("#app").on("taphold", startRecording);
 $("#hrs").on("click", startHRMonitoring);
 
 
+/*
 navigator.geolocation.watchPosition(
     position => {
         var speed = position.coords.speed;
@@ -21,13 +22,14 @@ navigator.geolocation.watchPosition(
         timeout: 10000
     }
 );
+*/
 
 
 var wakeLock;
 function startRecording(){
     document.body.webkitRequestFullscreen();
     navigator.wakeLock.request("screen");
-    startWatch();
+    //startWatch();
 
 }
 
