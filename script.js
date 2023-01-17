@@ -58,7 +58,7 @@ function startHRMonitoring(){
     .then(() => heartRateSensor.startNotificationsHeartRateMeasurement().then(heartRateMeasurement => {
         $("#hrs").off("click");
         $("span").css({ "color": "black" });
-        var hr_limit = 85;
+        var hr_limit = 150;
         var hr_limit_reached = false;
         heartRateMeasurement.addEventListener("characteristicvaluechanged", event => {
             var hr = heartRateSensor.parseHeartRate(event.target.value).heartRate;
